@@ -1,7 +1,7 @@
 # JFR-Processor
 
 Example project to view content of JFR file and visualize it as you wish.
-It was inspired by http://hirt.se/blog/?p=446 and https://github.com/chrishantha/jfr-flame-graph https://github.com/brendangregg/FlameGraph
+It was inspired by [http://hirt.se/blog/?p=446]() and [https://github.com/chrishantha/jfr-flame-graph]() and of course [https://github.com/brendangregg/FlameGraph]()
 
 To run you have to get install JDK 7u40+
 
