@@ -1,7 +1,10 @@
 # JFR-Processor
 
-Example project to view content of JFR file and visualize it as you wish.
-It was inspired by [http://hirt.se/blog/?p=446]() and [https://github.com/chrishantha/jfr-flame-graph]() and of course [https://github.com/brendangregg/FlameGraph]()
+Example project to view content of JFR file and visualize/analyze it in my own way.
+
+There is only one example of parsing and analyzing of jfr at the moment.
+
+##FlameGraph generation based on jfr  profiling samples
 
 To run you have to get installed JDK 7u40+
 
@@ -11,3 +14,15 @@ To run you have to get installed JDK 7u40+
 
 2) make a flamegraph from output.txt (default file for folded stacks)
 `./flamegraph.pl --minwidth 2 output.txt > flame.svg`
+
+##Resources
+###JFR Parsing
+Markus Hirt's blog [http://hirt.se/blog] has a vast information about JFR  and JMC. 
+
+Some posts about parsing jfrs:
+* Parsing Flight Recordings – an Example [http://hirt.se/blog/?p=459]
+* Using the Flight Recorder Parsers [http://hirt.se/blog/?p=446]
+
+###Flamegraph
+* FlameGraph by Brendann Gregg [https://github.com/brendangregg/FlameGraph]
+* An example of how to convert JFR stack to folded stack [https://github.com/chrishantha/jfr-flame-graph]
