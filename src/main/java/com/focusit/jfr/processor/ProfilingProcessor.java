@@ -117,6 +117,12 @@ public class ProfilingProcessor
                 {
                     StringBuilder methodBuilder = new StringBuilder();
                     IMCMethod method = frame.getMethod();
+
+                    if (method == null)
+                    {
+                        continue;
+                    }
+
                     methodBuilder.append(method.getHumanReadable(false, true, true, true, true, true));
                     if (!ignoreLineNumbers)
                     {
