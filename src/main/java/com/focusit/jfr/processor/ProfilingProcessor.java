@@ -25,6 +25,8 @@ import com.jrockit.mc.flightrecorder.spi.IEvent;
 import com.jrockit.mc.flightrecorder.spi.IView;
 
 /**
+ * Process stacks stored in a jfr-file.
+ *
  * Created by doki on 18.08.16.
  */
 public class ProfilingProcessor

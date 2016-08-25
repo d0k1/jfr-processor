@@ -10,10 +10,26 @@ To run you have to get installed JDK 7u40+
 
 1) you need to get a folded stacks from jfr. To get them, run command like this (In example below I filter stack by date them acquired and thread name)
  
-`java -jar target/processor-1.0-jar-with-dependencies.jar -f /tmp/record.jfr -df "17.08.2016 18:05:36,772" -dt "17.08.2016 18:05:56,772" -tnm "exec-164"`
+`java -cp target/processor-1.0-jar-with-dependencies.jar:$JAVA_HOME/lib/missioncontrol/plugins/com.jrockit.mc.flightrecorder_5.5.0.165303.jar:$JAVA_HOME/lib/missioncontrol/plugins/com.jrockit.mc.common_5.5.0.165303.jar com.focusit.jfr.processor.ProfilingProcessor -f /tmp/record.jfr -df "17.08.2016 18:05:36,772" -dt "17.08.2016 18:05:56,772" -tnm "exec-164"`
 
 2) make a flamegraph from output.txt (default file for folded stacks)
 `./flamegraph.pl --minwidth 2 output.txt > flame.svg`
+
+##Exception statistic
+
+You can view some statistic about recorder exceptions(error) in spreadsheet processor you like. This program can produce a csv file with aggregated info about exeptions.
+
+###List of columns csv file has:
+
+* Exception class
+* Thread
+* Count
+
+To get that csv you need to run 
+
+`java -cp target/processor-1.0-jar-with-dependencies.jar:$JAVA_HOME/lib/missioncontrol/plugins/com.jrockit.mc.flightrecorder_5.5.0.165303.jar:$JAVA_HOME/lib/missioncontrol/plugins/com.jrockit.mc.common_5.5.0.165303.jar com.focusit.jfr.processor.ExceptionProcessor -f /tmp/record.jfr`
+
+Data will be stored to result.csv
 
 ##Resources
 ###JFR Parsing
