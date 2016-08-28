@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.focusit.jfr.processor.GroovyEval">
+  <grid id="27dc6" binding="rootPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="800" height="600"/>
+    </constraints>
+    <properties>
+      <minimumSize width="800" height="600"/>
+      <preferredSize width="800" height="600"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="8ea7f" binding="contentPanel" layout-manager="BorderLayout" hgap="5" vgap="5">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="a2ab3" binding="JFRSourcePanel" layout-manager="FlowLayout" hgap="5" vgap="2" flow-align="0">
+            <constraints border-constraint="North"/>
+            <properties>
+              <minimumSize width="700" height="35"/>
+              <preferredSize width="790" height="35"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="d70c" class="javax.swing.JLabel">
+                <constraints/>
+                <properties>
+                  <labelFor value="e82b6"/>
+                  <text value="JFR File"/>
+                </properties>
+              </component>
+              <component id="e82b6" class="javax.swing.JTextField" binding="sourceFileField">
+                <constraints/>
+                <properties>
+                  <preferredSize width="500" height="26"/>
+                </properties>
+              </component>
+              <component id="6a222" class="javax.swing.JButton" binding="browseButton">
+                <constraints/>
+                <properties>
+                  <text value="..."/>
+                </properties>
+              </component>
+              <component id="a54eb" class="javax.swing.JButton" binding="loadJfr">
+                <constraints/>
+                <properties>
+                  <label value="Load"/>
+                  <text value="Load"/>
+                </properties>
+              </component>
+              <component id="3e290" class="javax.swing.JButton" binding="runButton">
+                <constraints/>
+                <properties>
+                  <text value="Process"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="47c12" layout-manager="BorderLayout" hgap="5" vgap="5">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <preferredSize width="780" height="500"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <scrollpane id="7ab3a" binding="scrollPane1" custom-create="true">
+                <constraints border-constraint="Center"/>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="aec7" class="org.fife.ui.rsyntaxtextarea.RSyntaxTextArea" binding="scriptArea">
+                    <constraints/>
+                    <properties>
+                      <codeFoldingEnabled value="true"/>
+                      <fadeCurrentLineHighlight value="false"/>
+                      <lineWrap value="true"/>
+                      <marginLineEnabled value="false"/>
+                      <markOccurrences value="true"/>
+                      <paintMarkOccurrencesBorder value="true"/>
+                      <paintMatchedBracketPair value="true"/>
+                      <text value="System.out.println(&quot;This groovy-script is going to  parse JFR&quot;);&#10;return 1;" noi18n="true"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="1b423" binding="templatesPanel" layout-manager="FlowLayout" hgap="5" vgap="2" flow-align="0">
+        <constraints border-constraint="South"/>
+        <properties>
+          <preferredSize width="780" height="35"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="c451c" class="javax.swing.JButton" binding="stackprocessButton">
+            <constraints/>
+            <properties>
+              <text value="Stack processing"/>
+            </properties>
+          </component>
+          <component id="3a551" class="javax.swing.JButton" binding="exceptionprocessButton">
+            <constraints/>
+            <properties>
+              <text value="Exception processing"/>
+            </properties>
+          </component>
+          <component id="a6de1" class="javax.swing.JButton" binding="helpButton">
+            <constraints/>
+            <properties>
+              <text value="Help"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

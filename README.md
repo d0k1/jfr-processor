@@ -31,6 +31,13 @@ To get that csv you need to run
 
 Data will be stored to result.csv
 
+##Groovy-based custom analyzer
+
+When you want to find something special in dozens of JFR events you can use groovy.
+
+`java -cp target/processor-1.0-jar-with-dependencies.jar:$JAVA_HOME/lib/missioncontrol/plugins/com.jrockit.mc.flightrecorder_5.5.0.165303.jar:$JAVA_HOME/lib/missioncontrol/plugins/com.jrockit.mc.common_5.5.0.165303.jar com.focusit.jfr.processor.App`
+ 
+
 ##Resources
 ###JFR Parsing
 Markus Hirt's blog [http://hirt.se/blog] has a vast information about JFR  and JMC. 
